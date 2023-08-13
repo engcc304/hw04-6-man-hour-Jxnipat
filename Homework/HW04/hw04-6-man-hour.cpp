@@ -26,3 +26,30 @@
         Employees ID = 0000500349
         Salary = U$ 374,000.00
 */
+#include <stdio.h>
+
+int main() {
+    char employeeID[11];  // รหัสประจำตัวพนักงาน (สูงสุด 10 ตัวอักษร + 1 ตัวสำหรับ null-terminated string)
+    int workingHours;
+    float salaryPerHour, totalSalary;
+
+    // รับข้อมูลจากผู้ใช้
+    printf("Input the Employees ID(Max. 10 chars):\n");
+    scanf("%s", employeeID);
+
+    printf("Input the working hrs:\n");
+    scanf("%d", &workingHours);
+
+    printf("Salary amount/hr:\n");
+    scanf("%f", &salaryPerHour);
+
+    // คำนวณเงินเดือนทั้งหมด
+    totalSalary = workingHours * salaryPerHour;
+
+    // แสดงผลลัพธ์
+    printf("Expected Output:\n");
+    printf("Employees ID = %s\n", employeeID);
+    printf("Salary = U$ %.2f\n", totalSalary);
+
+    return 0;
+}
