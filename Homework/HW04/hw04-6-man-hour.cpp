@@ -29,11 +29,10 @@
 #include <stdio.h>
 
 int main() {
-    char employeeID[11];  // รหัสประจำตัวพนักงาน (สูงสุด 10 ตัวอักษร + 1 ตัวสำหรับ null-terminated string)
+    char employeeID[11];
     int workingHours;
     float salaryPerHour, totalSalary;
 
-    // รับข้อมูลจากผู้ใช้
     printf("Input the Employees ID(Max. 10 chars):\n");
     scanf("%s", employeeID);
 
@@ -43,13 +42,11 @@ int main() {
     printf("Salary amount/hr:\n");
     scanf("%f", &salaryPerHour);
 
-    // คำนวณเงินเดือนทั้งหมด
     totalSalary = workingHours * salaryPerHour;
 
-    // แสดงผลลัพธ์
     printf("Expected Output:\n");
     printf("Employees ID = %s\n", employeeID);
-    printf("Salary = U$ %.2f\n", totalSalary);
+    printf("Salary = U$ %.2f\n", totalSalary);  // ใช้ %.2f เพื่อแสดงทศนิยม 2 ตำแหน่ง
 
     return 0;
 }
